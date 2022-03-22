@@ -7,7 +7,7 @@
  * */
 
 /* ******************** Configurations ******************** */
-static const unsigned int borderpx  		= 0;	/* border pixel of windows */
+static const unsigned int borderpx  		= 1;	/* border pixel of windows */
 static const unsigned int default_border 	= 0;	// to switch back to default border after dynamic border resizing via keybinds
 static const unsigned int snap      		= 32;	/* snap pixel */
 static const unsigned int gappih    		= 5;	/* horiz inner gap between windows */
@@ -80,13 +80,19 @@ static const Rule rules[] = {
      *	WM_NAME(STRING) = title
      */
     /* class      			instance    title       tags mask     iscentered   isfloating   monitor */
-	{ "Gimp",     			NULL,       NULL,       0,            0,           1,           -1 },
+	{ "Gimp",     			NULL,       NULL,       2,            0,           1,           -1 },
+	{ "Slack",     			NULL,       NULL,       1 << 5,       0,           0,           1 },
+	{ "Evernote",     		NULL,       NULL,       1 << 7,       0,           0,           1 },
+	{ "Microsoft Teams - Preview",  NULL,       NULL,       1 << 5,            0,           0,           0 },
+	{ "jetbrains-idea",   		NULL,       NULL,       1 << 3,            0,           0,           -1 },
+	{ "Geany",   		        NULL,       NULL,       1 << 4,       0,           0,           -1 },
 	{ "Inkscape",     		NULL,       NULL,       0,            0,           1,           -1 },
-	{ "Firefox",  			NULL,       NULL,       1 << 8,       0,           0,           -1 },
+	{ "firefox",  			NULL,       NULL,       1 << 1,       0,           0,           -1 },
 	{ "Viewnior",  			NULL,       NULL,       0,       	  1,           1,           -1 },
 	{ "MPlayer",  			NULL,       NULL,       0,       	  1,           1,           -1 },
-	{ "Pcmanfm",  			NULL,       NULL,       0,       	  1,           1,           -1 },
-	{ "Music",  			NULL,       NULL,       0,       	  1,           1,           -1 },
+	{ "Pcmanfm",  			NULL,       NULL,       3,       	  1,           1,           -1 },
+	{ "Thunar",  			NULL,       NULL,       1 << 2,       	  1,           1,           -1 },
+	{ "Music",  			NULL,       NULL,       7,       	  1,           1,           -1 },
 	{ "Yad",  				NULL,       NULL,       0,       	  1,           1,           -1 },
 	{ "feh",  				NULL,       NULL,       0,       	  1,           1,           -1 },
 	{ "Pavucontrol",  		NULL,       NULL,       0,       	  1,           1,           -1 },
@@ -142,7 +148,7 @@ static char dmenumon[2] 				= "0"; /* component of dmenucmd, manipulated in spaw
 static const char *dmenucmd[]  			= { "dmenu", NULL };
 
 /* Launch Apps */
-static const char *stcmd[]  			= { "st", NULL };
+static const char *stcmd[]  			= { "alacritty", NULL };
 static const char *termcmd[]  			= { "/usr/share/archcraft/dwm/bin/dwmterm.sh", NULL };
 static const char *floatterm[]  		= { "/usr/share/archcraft/dwm/bin/dwmterm.sh", "-f", NULL };
 static const char *fmcmd[]    			= { "/usr/share/archcraft/dwm/bin/dwmapps.sh", "-f", NULL };
