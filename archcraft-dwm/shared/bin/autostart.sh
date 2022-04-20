@@ -41,7 +41,9 @@ hsetroot -cover /usr/share/archcraft/dwm/wallpapers/default.png
 exec mpd &
 
 ## Add your autostart programs here --------------
-
+export _JAVA_AWT_WM_NONREPARENTING=1
+wmname LG3D
+/usr/share/archcraft/dwm/bin/screenlayout.sh &
 ## -----------------------------------------------
 
 # Launch DWM
