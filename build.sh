@@ -20,7 +20,7 @@ trap exit_on_signal_SIGTERM SIGTERM
 # Build packages
 build_pkg () {
 	echo -e "\nBuilding Package ${1} - \n"
-	cd ${1} && makepkg -s && rm -rf src pkg
+	cd ${1} && rm -f *.pkg.tar.zst && makepkg -s && rm -rf src pkg
 
 	if [[ "$1" == "archcraft-st" ]]; then
 		rm *.tar.gz
