@@ -44,6 +44,7 @@ exec mpd &
 export _JAVA_AWT_WM_NONREPARENTING=1
 wmname LG3D
 /usr/share/archcraft/dwm/bin/screenlayout.sh &
+/usr/bin/caffeine-indicator &
 ## -----------------------------------------------
 
 # Launch DWM
