@@ -39,16 +39,16 @@ class = Dunst
 timeout = 2
 background = "#1e222a"
 foreground = "#c8ccd4"
-frame_color = "#61afef"
+frame_color = "#aaaaff"
 
 [urgency_normal]
 timeout = 2
 background = "#1e222a"
 foreground = "#c8ccd4"
-frame_color = "#61afef"
+frame_color = "#aaaaff"
 
 [urgency_critical]
 timeout = 2
 background = "#1e222a"
 foreground = "#c8ccd4"
-frame_color = "#e06c75"
+frame_color = "#aaaaff"

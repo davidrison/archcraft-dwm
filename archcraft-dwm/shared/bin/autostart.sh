@@ -25,9 +25,6 @@ xfce4-power-manager &
 ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
 
-# Restore wallpaper
-hsetroot -cover /usr/share/archcraft/dwm/wallpapers/default.png
-
 # Lauch dwmbar
 /usr/share/archcraft/dwm/bin/dwmbar.sh &
 
@@ -45,6 +42,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 wmname LG3D
 /usr/share/archcraft/dwm/bin/screenlayout.sh &
 /usr/bin/caffeine-indicator &
+nitrogen --restore &
 ## -----------------------------------------------
 
 # Launch DWM
