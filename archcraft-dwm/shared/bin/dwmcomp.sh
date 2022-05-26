@@ -10,4 +10,4 @@ killall -q picom
 while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
 
 # Launch picom
-picom --config /usr/share/archcraft/dwm/picom.conf &
+/usr/local/bin/picom -b --experimental-backends --config /usr/share/archcraft/dwm/picom.conf &
